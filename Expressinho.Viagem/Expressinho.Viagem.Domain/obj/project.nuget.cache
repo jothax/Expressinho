@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "C/t1L6bNyq5kM5p2TjrA9C9MATLxHs1uE39f8kMSr2cyEqg9pYqv9m2zDEvTkDcqpgo08BrmTsD+nojrTwEy8w==",
+  "success": true,
+  "projectFilePath": "/home/jota/Dev/c#/Expressinho/Expressinho.Viagem/Expressinho.Viagem.Domain/Expressinho.Viagem.Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/jota/.nuget/packages/flunt/2.0.5/flunt.2.0.5.nupkg.sha512",
+    "/home/jota/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}
