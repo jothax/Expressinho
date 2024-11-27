@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Expressinho.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d8a1a72711e9bccbcf7702ed25d67a7b500f907")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4474580584690a7b7f3ff24ca00222dce46f0a37")]
 [assembly: System.Reflection.AssemblyProductAttribute("Expressinho.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Expressinho.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

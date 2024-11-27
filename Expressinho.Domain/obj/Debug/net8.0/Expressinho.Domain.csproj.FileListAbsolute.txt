@@ -1,0 +1,13 @@
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/obj/Debug/net8.0/Expressinho.Domain.csproj.AssemblyReference.cache
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/obj/Debug/net8.0/Expressinho.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/obj/Debug/net8.0/Expressinho.Domain.AssemblyInfoInputs.cache
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/obj/Debug/net8.0/Expressinho.Domain.AssemblyInfo.cs
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/obj/Debug/net8.0/Expressinho.Domain.csproj.CoreCompileInputs.cache
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/obj/Debug/net8.0/Expressinho.Domain.sourcelink.json
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/bin/Debug/net8.0/Expressinho.Domain.deps.json
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/bin/Debug/net8.0/Expressinho.Domain.dll
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/bin/Debug/net8.0/Expressinho.Domain.pdb
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/obj/Debug/net8.0/Expressinho.Domain.dll
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/obj/Debug/net8.0/refint/Expressinho.Domain.dll
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/obj/Debug/net8.0/Expressinho.Domain.pdb
+/home/jota/Dev/c#/Expressinho/Expressinho.Domain/obj/Debug/net8.0/ref/Expressinho.Domain.dll

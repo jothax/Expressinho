@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "65Q1asLrT/2qU3VEP0nW5n3tUUvCTS04BTv3u7IiM4s1zkoTz+qPEMATP076UEAVqRizJT9k2YtLD4H4JkV5vw==",
+  "dgSpecHash": "vMcKdk7IZNQmEMeUS5arvcomDOWvfTLiEydLy7Ad6GLYjX91rogbEH2dokHmkYqTOqjQIhEmbQgzvsjKvaRoTQ==",
   "success": true,
   "projectFilePath": "/home/jota/Dev/c#/Expressinho/Expressinho.Tests/Expressinho.Tests.csproj",
   "expectedPackageFiles": [
     "/home/jota/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
+    "/home/jota/.nuget/packages/flunt/2.0.5/flunt.2.0.5.nupkg.sha512",
     "/home/jota/.nuget/packages/microsoft.codecoverage/17.6.0/microsoft.codecoverage.17.6.0.nupkg.sha512",
     "/home/jota/.nuget/packages/microsoft.net.test.sdk/17.6.0/microsoft.net.test.sdk.17.6.0.nupkg.sha512",
     "/home/jota/.nuget/packages/microsoft.testplatform.objectmodel/17.6.0/microsoft.testplatform.objectmodel.17.6.0.nupkg.sha512",

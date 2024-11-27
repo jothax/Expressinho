@@ -7,8 +7,8 @@ namespace Expressinho.Domain.ValueObjects.Contracts
         public CreateLicenceContract(Licence licence)
         {
             Requires()
-            .IsNotNullOrEmpty(licence.RegisterNumber, "Register Number can't is null or empty")
-            .IsNotNullOrEmpty(licence.LicenceNumber, "Licence Number can't is null or empty");
+            .IsNotNullOrEmpty(licence.RegisterNumber, "Numero de Registro não pode ser nulo ou vazio")
+            .IsNotNullOrEmpty(licence.LicenceNumber, "Numero de Licença não pode ser nulo ou vazio");
         }
     }
 }
