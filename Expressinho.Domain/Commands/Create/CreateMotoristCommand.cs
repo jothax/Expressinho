@@ -1,22 +1,21 @@
 using Expressinho.Domain.Commands.Contracts;
 using Expressinho.Domain.Entities;
+using Expressinho.Domain.Security;
 using Expressinho.Domain.ValueObjects;
-using Expressinho.Domain.ValueObjects.Contracts;
 using Flunt.Validations;
 
-namespace CreateMotoristCommand
+namespace Expressinho.Domain.Commands
 {
     public class CreateMotoristCommand : Contract<CreateMotoristCommand>,ICommand
     {
-        public CreateMotoristCommand(){}
-
         public CreateMotoristCommand(
             string name, 
             Email email, 
             string phone, 
             EGender gender, 
             byte[] password,
-            byte[] salt, 
+            byte[] salt,
+            int iterations, 
             DateTime birthdate,
             Licence licence,
             ELicenceCategory licenceCategory
@@ -28,35 +27,37 @@ namespace CreateMotoristCommand
             Gender = gender;
             Password = password;
             Salt = salt;
+            Iterations = iterations;
             BirthDate = birthdate;
             Licence = licence;
             LicenceCategory = licenceCategory;
         }
-        public string? Name {get; private set;}
-
-        public Email? Email {get; private set;}
-        
-        public string? Phone {get; private set;}
-
-        public EGender Gender{get; private set;}
-        
-        public byte[]? Password{get; private set;}
-
-        public byte[]? Salt{get; private set;}
-        
+        public string Name {get; private set;}
+        public Email Email {get; private set;}      
+        public string Phone {get; private set;}
+        public EGender Gender{get; private set;}     
+        public byte[] Password{get; private set;}
+        public byte[] Salt{get; private set;}
+        public int Iterations {get; private set;}       
         public DateTime BirthDate {get; private set;}
-
-        public Licence? Licence{get; private set;}
-
+        public Licence Licence{get; private set;}
         public ELicenceCategory LicenceCategory{get; private set;}
-
+        
         public void Validate()
         {
             AddNotifications(
                 Requires()
-                .IsNotNullOrEmpty(Name,"nome não pode ser nulo ou vazio")
-                .IsNotNullOrEmpty(Phone, "telefone não pode ser nulo ou vazio")
+                .IsNotNullOrEmpty(Name,"Não pode ser nulo ou vazio")
+                .IsNotNullOrEmpty(Phone, "Não pode ser nulo ou vazio")
+                .Join(Email, Licence)
             );
+        }
+
+        public void CryptPassword()
+        {
+            Salt = Crypto.GenerateSalt();
+            Iterations = Crypto.DefaultIterations;
+            Password = Crypto.HashPassword(Password, Salt, Iterations);
         }
     }
 }

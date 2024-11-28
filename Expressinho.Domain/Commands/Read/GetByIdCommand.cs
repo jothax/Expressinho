@@ -1,5 +1,4 @@
 using Expressinho.Domain.Commands.Contracts;
-using Expressinho.Domain.Entities;
 using Flunt.Validations;
 
 namespace Expressinho.Domain.Commands
@@ -12,9 +11,14 @@ namespace Expressinho.Domain.Commands
         }
 
         public Guid Id {get; private set;}
+        
         public void Validate()
         {
-            AddNotifications(Requires().IsNotNull(Id,"Id não pode ser nulo"));
+            AddNotifications
+            (
+                Requires()
+                .IsNotNull(Id,"Id não pode ser nulo")
+            );
         }
     }
 }

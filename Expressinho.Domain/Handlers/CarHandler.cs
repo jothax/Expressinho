@@ -3,7 +3,6 @@ using Expressinho.Domain.Commands.Contracts;
 using Expressinho.Domain.Entities;
 using Expressinho.Domain.Handlers.Contracts;
 using Expressinho.Domain.Repositories;
-using Expressinho.Viagem.Domain.Commands;
 
 namespace Expressinho.Domain.Handlers
 {
@@ -22,11 +21,11 @@ namespace Expressinho.Domain.Handlers
             if(command.IsValid == false)
                 return new GenericCommandResult(false,"Algo deu errado!", command.Notifications);
 
-            var car = new Car(command.Model, command.Year, command.Plate, command.IdMotorist);
+            var car = new Car(command.Model, command.Year, command.Plate, command.Motorist);
 
             _carRepository.Create(car);
 
-            return new GenericCommandResult(true, "Carro adicionado com sucesso", car);
+            return new GenericCommandResult(true, "Carro criado com sucesso", car);
         }
 
         /* public ICommandResult Handle(GetByIdCommand command)

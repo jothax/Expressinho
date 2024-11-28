@@ -1,6 +1,8 @@
+using Expressinho.Domain.Entities.Contracts;
+
 namespace Expressinho.Domain.Entities
 {
-    public class Address : Entity
+    public class Address : Entity, IAggregateRoot
     {
         public Address(
             string number, 
@@ -16,13 +18,13 @@ namespace Expressinho.Domain.Entities
             City = city;
             State = state;
             Zipcode = zipcode;
-            IdEntity = idEntity;
+            Entity = idEntity;
         }
         public string Number {get; private set;}
         public string Street {get; private set;}
         public string City {get; private set;}
         public string State {get; private set;}
         public string Zipcode {get; private set;}
-        public Guid IdEntity{get; private set;}
+        public Guid Entity {get; private set;}
     }
 }

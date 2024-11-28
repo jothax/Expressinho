@@ -8,8 +8,8 @@ namespace Expressinho.Domain.ValueObjects.Contracts
         {
             // in this case, the api can't input empty coordinates
             Requires()
-            .IsNotNullOrEmpty(coordinate.Latitude,"Latitude não pode ser nulo ou vazio")
-            .IsNotNullOrEmpty(coordinate.Longitude,"Longitude não pode ser nulo ou vazio");
+            .IsNotNullOrEmpty(coordinate.Latitude,"Não pode ser nulo ou vazio")
+            .IsNotNullOrEmpty(coordinate.Longitude,"Não pode ser nulo ou vazio");
         }
     }
 

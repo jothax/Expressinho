@@ -2,10 +2,8 @@ using Expressinho.Domain.Entities;
 
 namespace Expressinho.Domain.Repositories
 {
-    public interface IMotoristRepository
+    public interface IMotoristRepository : IRepository<Motorist>
     {
-        void Create(Motorist motorist);
-        void Update(Motorist motorist);
-        IEnumerable<Motorist> GetById(Guid id);
+        void GetMotoristById(Guid id);
     }
 }

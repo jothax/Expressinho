@@ -1,6 +1,6 @@
 using Expressinho.Domain.Commands.Contracts;
 
-namespace Expressinho.Viagem.Domain.Commands
+namespace Expressinho.Domain.Commands
 {
     public class GenericCommandResult : ICommandResult
     {

@@ -1,10 +1,9 @@
-
-using System.Reflection.Metadata;
+using Expressinho.Domain.Entities.Contracts;
 using Expressinho.Domain.ValueObjects;
 
 namespace Expressinho.Domain.Entities
 {
-    public class Travel : Entity
+    public class Travel : Entity, IAggregateRoot
     {
         public Travel
         (

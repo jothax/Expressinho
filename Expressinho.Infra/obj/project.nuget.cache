@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "XcshIfw43fz7tlDs7Q8wFOOjruAzihZzyw6boHzFsmM17sxHCkZIRvFt45qFc2u9WYe8lc+Ret3I8IVDya6p7A==",
+  "success": true,
+  "projectFilePath": "/home/jota/Dev/c#/Expressinho/Expressinho.Infra/Expressinho.Infra.csproj",
+  "expectedPackageFiles": [
+    "/home/jota/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

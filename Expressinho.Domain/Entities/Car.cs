@@ -1,19 +1,21 @@
+using Expressinho.Domain.Entities.Contracts;
+
 namespace Expressinho.Domain.Entities
 {
-    public class Car : Entity 
+    public class Car : Entity, IAggregateRoot
     {
-        public Car(string model, string year, string plate, Guid idMotorist) : base()
+        public Car(string model, string year, string plate, Motorist motorist) : base()
         {
             Model = model;
             Year = year;
             Plate = plate;
-            IdMotorist = idMotorist;
+            Motorist = motorist;
         }
         public string Model {get; private set;}
         
         public string Year {get; private set;}
         
         public string Plate {get; private set;}
-        public Guid IdMotorist{get; private set;}
+        public Motorist Motorist{get; private set;}
     }
 }

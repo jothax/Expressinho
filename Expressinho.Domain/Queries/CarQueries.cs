@@ -7,7 +7,7 @@ namespace Expressinho.Domain.Queries
     {
         public static Expression<Func<Car, bool>> GetByMotoristId(Guid id)
         {
-            return x => x.IdMotorist == id;
+            return x => x.Motorist.Id == id;
         }
     }
 }

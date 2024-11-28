@@ -7,7 +7,7 @@ namespace Expressinho.Domain.ValueObjects.Contracts
         public CreateEmailContract(Email email)
         {
             Requires()
-                .IsNotEmail(email.Address, "Email invalido");
+                .IsNotEmail(email.Address, "Formato de Email Inválido");
 
         }
     }

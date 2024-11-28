@@ -1,6 +1,8 @@
+using Expressinho.Domain.Entities.Contracts;
+
 namespace Expressinho.Domain.Entities
 {
-    public class Rating : Entity
+    public class Rating : Entity, IAggregateRoot
     {
         public Rating(decimal rate, Guid idEntity)
         {

@@ -1,10 +1,10 @@
 using Expressinho.Domain.Commands.Contracts;
+using Flunt.Validations;
 
 namespace Expressinho.Domain.Commands
 {
-    public class CreateRatingCommand : ICommand
+    public class CreateRatingCommand : Contract<CreateRatingCommand>, ICommand
     {
-        public CreateRatingCommand(){}
         public CreateRatingCommand(decimal rate, Guid idEntity)
         {
             Date = DateTime.Now;
@@ -17,7 +17,11 @@ namespace Expressinho.Domain.Commands
 
         public void Validate()
         {
-            throw new NotImplementedException();
+            AddNotifications
+            (
+                Requires()
+                .IsBetween(Rate,0m, 5.1m,"Tem que estar entre 0 e 5")
+            );
         }
     }
 }

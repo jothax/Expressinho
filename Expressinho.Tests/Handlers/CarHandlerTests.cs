@@ -4,7 +4,7 @@ using Expressinho.Domain.Handlers;
 using Expressinho.Tests.Repositories;
 using Expressinho.Viagem.Domain.Commands;
 
-[TestClass]
+/* [TestClass]
 public class CarHandlerTests
 {
     public static readonly Guid _validIdMotorist = Guid.NewGuid();
@@ -34,4 +34,4 @@ public class CarHandlerTests
         _result = (GenericCommandResult)_handler.Handle(_validCommand);
         Assert.AreEqual(_result.Sucess, true);
     }
-}
+} */

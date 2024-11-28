@@ -1,9 +1,10 @@
+using Expressinho.Domain.Entities.Contracts;
 using Flunt.Notifications;
 
 namespace Expressinho.Domain.Entities
 
 {
-    public abstract class Entity : Notifiable<Notification>, IEquatable<Entity>
+    public abstract class Entity : Notifiable<Notification>, IEntity ,IEquatable<Entity> 
     {
         public Entity()
         {

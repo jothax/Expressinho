@@ -1,12 +1,13 @@
 using Expressinho.Domain.Commands.Contracts;
 using Expressinho.Domain.Entities;
 using Expressinho.Domain.ValueObjects;
+using Flunt.Validations;
 
-namespace CreateTripCommand
+namespace Expressinho.Domain.Commands
 {
-    public class CreateTripCommand : ICommand
+    public class CreateTravelCommand : Contract<CreateTravelCommand>, ICommand
     {
-        public CreateTripCommand
+        public CreateTravelCommand
         (
             Coordinate origin, 
             Coordinate destiny,
@@ -46,8 +47,20 @@ namespace CreateTripCommand
         public Passager Passager {get; private set;}
 
         public void Validate()
+        { 
+            AddNotifications
+            (
+                Requires()
+                .IsGreaterThan(Price, 0m,"Tem que ser maior que 0")
+                .Join(Origin,Destiny)
+            );
+        }
+
+        public decimal ReviseRate(decimal rating)
         {
-            
+            if(rating > 5m)
+                return 5m;
+            return rating;
         }
     }
 }

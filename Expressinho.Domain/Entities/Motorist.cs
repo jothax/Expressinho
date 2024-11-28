@@ -1,9 +1,10 @@
 
+using Expressinho.Domain.Entities.Contracts;
 using Expressinho.Domain.ValueObjects;
 
 namespace Expressinho.Domain.Entities
 {
-    public class Motorist : Entity
+    public class Motorist : Entity, IAggregateRoot
     {
         public Motorist(    
             string name, 
@@ -11,7 +12,8 @@ namespace Expressinho.Domain.Entities
             string phone, 
             EGender gender, 
             byte[] password,
-            byte[] salt, 
+            byte[] salt,
+            int iterations, 
             DateTime birthdate,
             Licence licence,
             ELicenceCategory licenceCategory
@@ -23,6 +25,7 @@ namespace Expressinho.Domain.Entities
             Gender = gender;
             Password = password;
             Salt = salt;
+            Iterations = iterations;
             BirthDate = birthdate;
             Licence = licence;
             LicenceCategory = licenceCategory;
@@ -38,7 +41,8 @@ namespace Expressinho.Domain.Entities
         public byte[] Password{get; private set;}
 
         public byte[] Salt{get; private set;}
-        
+
+        public int Iterations {get; private set;}
         public DateTime BirthDate {get; private set;}
 
         public Licence Licence{get; private set;}

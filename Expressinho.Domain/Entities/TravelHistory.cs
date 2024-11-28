@@ -1,15 +1,17 @@
+using Expressinho.Domain.Entities.Contracts;
+
 namespace Expressinho.Domain.Entities
 {
-    public class TravelHistory : Entity
+    public class TravelHistory : Entity, IAggregateRoot
     {
-        public TravelHistory(Guid idTravel, Guid idPassager, Guid idMotorist)
+        public TravelHistory(Travel travel, Passager passager, Motorist motorist)
         {
-            IdTravel = idTravel;
-            IdPassager = idPassager;
-            IdMotorist = idMotorist;
+            Travel = travel;
+            Passager = passager;
+            Motorist = motorist;
         }
-        public Guid IdTravel{get; private set;}
-        public Guid IdPassager{get; private set;}
-        public Guid IdMotorist{get; private set;}
+        public Travel Travel{get; private set;}
+        public Passager Passager{get; private set;}
+        public Motorist Motorist{get; private set;}
     }
 }
