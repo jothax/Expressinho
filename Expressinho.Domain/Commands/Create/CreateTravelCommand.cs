@@ -1,5 +1,6 @@
 using Expressinho.Domain.Commands.Contracts;
 using Expressinho.Domain.Entities;
+using Expressinho.Domain.Enums;
 using Expressinho.Domain.ValueObjects;
 using Flunt.Validations;
 
@@ -14,44 +15,44 @@ namespace Expressinho.Domain.Commands
             DateTime startDate,
             DateTime finishDate, 
             decimal price, 
-            decimal userRating, 
-            decimal driverRating,
+            decimal passagerRating, 
+            decimal motoristRating,
             EPaymentMethod paymentMethod,
             ETripMethod tripMethod,
-            Motorist motorist,
-            Passager passager 
+            Guid idMotorist,
+            Guid idPassager 
         )
         {
             Origin = origin;
             Destiny = destiny;
+            StartDate = startDate;
+            FinishDate = finishDate;
             Price = price;
-            UserRating = userRating;
-            DriverRating = driverRating;
+            PassagerRating = passagerRating;
+            MotoristRating = motoristRating;
             PaymentMethod = paymentMethod;
             TripMethod = tripMethod;
-            Motorist = motorist;
-            Passager = passager;
-            StartDate = startDate;
-            FinishDate = finishDate;            
+            IdMotorist = idMotorist;
+            IdPassager = idPassager;            
         }
-        public Coordinate Origin {get; private set;}
-        public Coordinate Destiny{get; private set;}
-        public DateTime StartDate{get; private set;}
-        public DateTime FinishDate{get; private set;}
-        public decimal Price {get; private set;}
-        public decimal UserRating{get; private set;}
-        public decimal DriverRating{get; private set;}
-        public EPaymentMethod PaymentMethod {get; private set;}
-        public ETripMethod TripMethod {get; private set;}
-        public Motorist Motorist {get; private set;}
-        public Passager Passager {get; private set;}
+        public Coordinate Origin {get; set;}
+        public Coordinate Destiny{get; set;}
+        public DateTime StartDate{get; set;}
+        public DateTime FinishDate{get; set;}
+        public decimal Price {get; set;}
+        public decimal PassagerRating{get; set;}
+        public decimal MotoristRating{get; set;}
+        public EPaymentMethod PaymentMethod {get; set;}
+        public ETripMethod TripMethod {get; set;}
+        public Guid IdMotorist {get; set;}
+        public Guid IdPassager {get; set;}
 
         public void Validate()
         { 
             AddNotifications
             (
                 Requires()
-                .IsGreaterThan(Price, 0m,"Tem que ser maior que 0")
+                .IsGreaterOrEqualsThan(Price, 0m,"Tem que ser maior ou igual a 0")
                 .Join(Origin,Destiny)
             );
         }

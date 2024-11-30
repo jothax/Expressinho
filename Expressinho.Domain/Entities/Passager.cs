@@ -8,8 +8,6 @@ namespace Expressinho.Domain.Entities
         public Passager(
         string name, 
         Email email, 
-        string phone, 
-        EGender gender, 
         byte[] password,
         byte[] salt,
         int iterations, 
@@ -18,21 +16,23 @@ namespace Expressinho.Domain.Entities
         {
             Name = name;
             Email = email;
-            Phone = phone;
-            Gender = gender;
             Password = password;
             Salt = salt;
-            Iteractions = iterations;
+            Iterations = iterations;
             BirthDate = birthdate;
+            Active = true;
         }
         public string Name {get; private set;}
         public Email Email {get; private set;}
-        public string Phone {get; private set;}
-        public EGender Gender{get; private set;}
         public byte[] Password{get; private set;}
         public byte[] Salt{get; private set;}
-        public int Iteractions {get; private set;}
-        public DateTime BirthDate {get; private set;}
- 
+        public int Iterations {get; private set;}
+        public DateTime BirthDate {get; private set;} 
+        public bool Active{get; private set;}
+
+        public void Desactive()
+        {
+            Active = false;
+        }
     }
 }

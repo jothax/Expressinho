@@ -1,4 +1,4 @@
-namespace Expressinho.Domain.Entities
+namespace Expressinho.Domain.Enums
 {
     public enum EPaymentMethod
     {

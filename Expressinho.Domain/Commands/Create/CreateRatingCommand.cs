@@ -11,16 +11,16 @@ namespace Expressinho.Domain.Commands
             Rate = rate;
             IdEntity = idEntity;
         }
-        public DateTime Date{get; private set;}
-        public decimal Rate{get; private set;}
-        public Guid IdEntity{get; private set;}
+        public DateTime Date{get; set;}
+        public decimal Rate{get; set;}
+        public Guid IdEntity{get; set;}
 
         public void Validate()
         {
             AddNotifications
             (
                 Requires()
-                .IsBetween(Rate,0m, 5.1m,"Tem que estar entre 0 e 5")
+                .IsBetween(Rate,0m, 5m,"Tem que estar entre 0 e 5")
             );
         }
     }

@@ -1,12 +1,12 @@
 using Expressinho.Domain.Commands.Contracts;
-using Expressinho.Domain.Entities;
+using Expressinho.Domain.Enums;
 using Flunt.Validations;
 
 namespace Expressinho.Domain.Commands
 {
     public class CreateCarCommand : Contract<CreateCarCommand>, ICommand
     {
-        public CreateCarCommand(string model, string year, string plate, Motorist motorist)
+        public CreateCarCommand(EModel model, string year, string plate, Guid motorist)
         {
             Model = model;
             Year = year;
@@ -14,16 +14,15 @@ namespace Expressinho.Domain.Commands
             Motorist = motorist;
         }
 
-        public string Model {get; private set;}
-        public string Year {get; private set;}
-        public string Plate {get; private set;}
-        public Motorist Motorist{get; private set;}
+        public EModel Model {get; set;}
+        public string Year {get; set;}
+        public string Plate {get; set;}
+        public Guid Motorist{get; set;}
 
         public void Validate()
         {
            AddNotifications(
             Requires()
-            .IsNotNullOrEmpty(Model,"Não pode ser nulo ou vazio")
             .IsNotNullOrEmpty(Year,"Não pode ser nulo ou vazio")
             .IsNotNullOrEmpty(Plate,"Não pode ser nulo ou vazio")
            );   

@@ -18,13 +18,13 @@ namespace Expressinho.Domain.Entities
             City = city;
             State = state;
             Zipcode = zipcode;
-            Entity = idEntity;
+            IdEntity = idEntity;
         }
         public string Number {get; private set;}
         public string Street {get; private set;}
         public string City {get; private set;}
         public string State {get; private set;}
         public string Zipcode {get; private set;}
-        public Guid Entity {get; private set;}
+        public Guid IdEntity {get; private set;}
     }
 }

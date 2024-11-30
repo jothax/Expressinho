@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expressinho.Api", "Expressi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expressinho.Tests", "Expressinho.Tests\Expressinho.Tests.csproj", "{B3F89B01-1163-45C2-97C3-15DA9D28BA89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expressinho.Infra", "Expressinho.Infra\Expressinho.Infra.csproj", "{C260C58E-FA19-4FF9-BB68-2F76C245AD10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{B3F89B01-1163-45C2-97C3-15DA9D28BA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3F89B01-1163-45C2-97C3-15DA9D28BA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3F89B01-1163-45C2-97C3-15DA9D28BA89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C260C58E-FA19-4FF9-BB68-2F76C245AD10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C260C58E-FA19-4FF9-BB68-2F76C245AD10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C260C58E-FA19-4FF9-BB68-2F76C245AD10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C260C58E-FA19-4FF9-BB68-2F76C245AD10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

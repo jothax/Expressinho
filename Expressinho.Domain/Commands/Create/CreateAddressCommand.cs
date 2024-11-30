@@ -23,12 +23,12 @@ namespace Expressinho.Domain.Commands
             IdEntity = idEntity;            
         }
         
-        public string Number {get; private set;}
-        public string Street {get; private set;}
-        public string City {get; private set;}
-        public string State {get; private set;}
-        public string Zipcode {get; private set;}
-        public Guid IdEntity{get; private set;}
+        public string Number {get; set;}
+        public string Street {get; set;}
+        public string City {get; set;}
+        public string State {get; set;}
+        public string Zipcode {get; set;}
+        public Guid IdEntity{get; set;}
 
         public void Validate()
         {

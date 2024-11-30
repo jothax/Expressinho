@@ -5,9 +5,9 @@ namespace Expressinho.Domain.Queries
 {
     public static class CarQueries
     {
-        public static Expression<Func<Car, bool>> GetByMotoristId(Guid id)
+        public static Expression<Func<Car, bool>> GetByIdMotorist(Guid id)
         {
-            return x => x.Motorist.Id == id;
+            return x => x.IdMotorist == id;
         }
     }
 }

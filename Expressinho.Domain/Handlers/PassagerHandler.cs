@@ -6,10 +6,15 @@ using Expressinho.Domain.Repositories;
 
 namespace Expressinho.Domain.Handlers
 {
-    public class PassagerHandler(IPassagerRepository passagerRepository) : 
+    public class PassagerHandler :
     IHandler<CreatePassagerCommand>
     {
-        private readonly IPassagerRepository _passagerRepository = passagerRepository;
+        private readonly IPassagerRepository _passagerRepository;
+
+        public PassagerHandler(IPassagerRepository passagerRepository)
+        {
+            _passagerRepository = passagerRepository;
+        }
 
         public ICommandResult Handle(CreatePassagerCommand command)
         {
@@ -23,8 +28,6 @@ namespace Expressinho.Domain.Handlers
             var passager = new Passager(
                 command.Name, 
                 command.Email, 
-                command.Phone,
-                command.Gender,
                 command.Password,
                 command.Salt,
                 command.Iterations,

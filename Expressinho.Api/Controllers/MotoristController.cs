@@ -1,5 +1,5 @@
-using Expressinho.Domain.Entities;
-using Expressinho.Domain.Repositories;
+using Expressinho.Domain.Commands;
+using Expressinho.Domain.Handlers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,9 +10,13 @@ namespace Expressinho.Api.Controllers
     [Authorize]
     public class MotoristController : ControllerBase
     {
-        /* public IEnumerable<Motorist> GetMotorists([FromServices]IMotoristRepository repository)
+        [Route("")]
+        [HttpPost]
+         public GenericCommandResult Create(
+            [FromBody]CreateMotoristCommand command,
+            [FromServices]MotoristHandler handler)
         {
-            
-        } */
+            return (GenericCommandResult)handler.Handle(command);
+        }
     }
 }

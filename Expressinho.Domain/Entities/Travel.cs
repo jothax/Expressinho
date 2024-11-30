@@ -1,4 +1,5 @@
 using Expressinho.Domain.Entities.Contracts;
+using Expressinho.Domain.Enums;
 using Expressinho.Domain.ValueObjects;
 
 namespace Expressinho.Domain.Entities
@@ -12,24 +13,20 @@ namespace Expressinho.Domain.Entities
             DateTime startDate,
             DateTime finishDate, 
             decimal price, 
-            decimal userRating, 
-            decimal driverRating,
             EPaymentMethod paymentMethod,
             ETripMethod tripMethod,
-            Motorist motorist,
-            Passager passager 
+            Guid idMotorist,
+            Guid idPassager 
         ) 
             : base()
         {
             Origin = origin;
             Destiny = destiny;
             Price = price;
-            UserRating = userRating;
-            DriverRating = driverRating;
             PaymentMethod = paymentMethod;
             TripMethod = tripMethod;
-            Motorist = motorist;
-            Passager = passager;
+            IdMotorist = idMotorist;
+            IdPassager = idPassager;
             StartDate = startDate;
             FinishDate = finishDate;
 
@@ -39,11 +36,9 @@ namespace Expressinho.Domain.Entities
         public DateTime StartDate{get; private set;}
         public DateTime FinishDate{get; private set;}
         public decimal Price {get; private set;}
-        public decimal UserRating{get; private set;}
-        public decimal DriverRating{get; private set;}
         public EPaymentMethod PaymentMethod {get; private set;}
         public ETripMethod TripMethod {get; private set;}
-        public Motorist Motorist {get; private set;}
-        public Passager Passager {get; private set;}
+        public Guid IdMotorist {get; private set;}
+        public Guid IdPassager {get; private set;}
     }
 }

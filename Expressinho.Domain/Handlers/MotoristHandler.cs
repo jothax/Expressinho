@@ -6,25 +6,28 @@ using Expressinho.Domain.Repositories;
 
 namespace Expressinho.Domain.Handlers
 {
-    public class MotoristHandler(IMotoristRepository motoristRepository) : 
+    public class MotoristHandler :
     IHandler<CreateMotoristCommand>
     {
-        private readonly IMotoristRepository _motoristRepository = motoristRepository;
+        private readonly IMotoristRepository _motoristRepository;
+
+        public MotoristHandler(IMotoristRepository motoristRepository)
+        {
+            _motoristRepository = motoristRepository;
+        }
 
         public ICommandResult Handle(CreateMotoristCommand command)
         {
             // FFV(Fail Fast Validation)
             command.Validate();
             if(command.IsValid == false)
-                return new GenericCommandResult(false, "Algo deu errado",command.Notifications);
+                return new GenericCommandResult(false, "Algo deu errado", command.Notifications);
             //Encrypt password
             command.CryptPassword();
 
             var motorist = new Motorist(
                 command.Name, 
                 command.Email, 
-                command.Phone,
-                command.Gender,
                 command.Password,
                 command.Salt,
                 command.Iterations,

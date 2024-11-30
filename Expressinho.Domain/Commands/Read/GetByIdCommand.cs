@@ -17,7 +17,7 @@ namespace Expressinho.Domain.Commands
             AddNotifications
             (
                 Requires()
-                .IsNotNull(Id,"Id não pode ser nulo")
+                .IsNotEmpty(Id,"não pode ser vazio")
             );
         }
     }
