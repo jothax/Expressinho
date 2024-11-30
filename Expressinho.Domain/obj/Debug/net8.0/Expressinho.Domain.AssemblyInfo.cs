@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Expressinho.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f884ded8cb00a8afc5f66dad64420712fb1fd527")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac27e5bc38d19acda6afbc4aa17cdc6ad6dc06ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("Expressinho.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Expressinho.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
